@@ -1,0 +1,94 @@
+body{
+	background-color: white;
+}
+
+header{
+	
+}
+
+header h1{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-weight: bold;
+	text-align: center;
+	font-size: 70px;
+}
+
+header img{
+	margin-left: 40%;
+	height: 283px;
+	width: 400px;
+}
+
+nav{
+	background-color: white;
+	padding: 2px;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+nav a{
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+}
+
+nav a.active{
+	font-weight: bold;
+}
+
+nav a:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+	color: #e6a2fa;
+}
+
+img.toyLeft{
+	height: 350px;
+	width: 360px;
+	margin-left: 14.5%;
+	float: left;
+}
+
+img.toyCenter{
+	height: 285px;
+	width: 220px;
+	margin-left: 9%;
+	margin-top: 1.2%;
+}
+
+img.toyRight{
+	height: 300px;
+	width: 160px;
+	margin-right: 14.5%;
+	margin-top: -0.6%;
+	float: right;
+}
+
+p.toyTitleLeft{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 23%;
+}
+
+p.toyTitleCenter{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 47.5%;
+	margin-top: -3.8%;
+}
+
+p.toyTitleRight{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right: 16%;
+	margin-top: -22%;
+	text-align: right;
+}
+
+footer{
+	background-color: white;
+	margin-top: 100%;
+}
+
