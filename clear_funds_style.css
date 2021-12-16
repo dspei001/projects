@@ -1,0 +1,330 @@
+/* **** BODY STYLE BEGINS * ****/
+
+body{
+	background-image: url("assets/bg.jpg");
+	background-repeat: no-repeat;
+   	background-attachment: fixed;
+	background-size: cover;
+	color: #000000;
+	font-family: 'dosis', serif;
+	margin: auto
+}
+
+/* **** BODY STYLE ENDS **** */
+/* **** MAIN STYLE BEGINS * ****/
+
+main{
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/* **** MAIN STYLE ENDS * ****/
+/* **** NAV STYLE BEGINS **** */
+
+nav ul{
+	background-color: rgba(0,0,0,0.9);
+	border-color: #000000;
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0%;
+}
+
+nav ul li{
+	float: left;
+	padding-left: 11%;
+}
+
+li a{
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	font-family: 'dosis', serif;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 14px 14px;
+	text-decoration: none;
+}
+
+li a:hover{
+	background-color: #ffffff;
+	color: #000000;
+	}
+	
+/* **** NAV STYLE ENDS * ****/
+/* **** DIV STYLE BEGINS * ****/
+
+div.banner{
+	background-image: url("assets/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: none;
+	opacity: 0.9;
+}
+
+div.figures{
+	margin-top: -5%;
+	margin-bottom: 30%;
+}
+
+div.goodwill{
+	font-family: 'dosis', serif;
+	font-size: 23px;
+	margin-left: 10%;
+	margin-top: 2%;
+}
+
+div.index{
+	text-align: left;
+	margin-left: 8%;
+	/*margin: auto;*/
+	width: 86%;
+}
+
+/* **** DIV STYLE ENDS * ****/
+/* **** IMAGE STYLE BEGINS * ****/
+
+img.logo{
+	float: left;
+	margin-left: 9%;
+	margin-top: -3%;
+	padding-right: 1%;
+}
+
+img.icons{
+	height: 130px;
+	width: 130px;
+	margin-right: 65%;
+	margin-top: 2%;
+}
+
+img.goodwill{
+	margin-top: 2%;
+	margin-bottom: -2%;
+	margin-left: 7%;
+}
+
+img.warning{
+	margin-left: 43%;
+}
+
+img.reportLeft{
+	float: left;
+	margin-left: 11%;
+	margin-top: 3%;
+}
+
+img.reportRight{
+	float: right;
+	margin-left: 30%;
+	margin-right: 15%;
+}
+
+/* **** IMAGE STYLE ENDS * ****/
+
+/* **** FIGURE STYLE BEGINS * ****/
+
+figure{
+	opacity: 0.8;
+}
+
+/* **** FIGURE STYLE ENDS * ****/
+/* **** HEADING STYLE BEGINS * ****/
+
+h1{
+	color: #ffffff;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 105px;
+	text-align: center;
+	opacity: 0.8;
+}
+
+h2{
+	color: #000000;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2.list{
+	margin-left: 18%;
+}
+
+h3{
+	color: #ffffff;
+	font-size: 35px;
+	margin-top: -3%;
+	text-align: center;
+}
+
+h3.goodwill{
+	color: #000000;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 35px;
+	font-weight: bold;
+	margin-left: 8%;
+	text-align: left;
+}
+
+h3.finder{
+	color: #000000;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 40px;
+	margin-left: 24%;
+	margin-bottom: -2%;
+	margin-top: 3%;
+	text-align: left;
+}
+
+h3.report{
+	color: #000000;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 5%;
+	text-align: center;
+}
+
+/* **** HEADING STYLE ENDS * ****/
+/* **** PARAGRAPH STYLE BEGINS * ****/
+
+p{
+	font-size: 23px;
+	margin-left: 11%;
+	margin-right: 11%;
+	margin-bottom: 7%;
+}
+
+p.center{
+	font-size: 25px;
+	margin-left: 32%;
+	text-align: center;
+}
+
+p.about{
+	margin-top: 3%;
+}
+
+p.reportLeft{
+	font-size: 23px;
+	float: right;
+	margin-right: 8%;
+	margin-top: -10%;
+}
+
+p.reportRight{
+	font-size: 23px;
+	float: right;
+	margin-left: 5%;
+	margin-top: -15%;
+	margin-right: 40%;
+}
+
+/* **** PARAGRAPH STYLE ENDS * ****/
+/* ***** ANCHOR STYLE BEGINS * ****/
+
+a.list{
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	margin-right: 7%;
+	margin-top: -15%;
+	margin-bottom: 14%;
+}
+
+/* **** ANCHOR STYLE ENDS * ****/
+/* **** FORM STYLE BEGINS * ****/
+
+form{
+	padding: 1%;
+}
+
+label, input{
+	float: center;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+legend{
+	font-weight: bold;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	background-color: #000000;
+	border: solid white 4px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	margin: 4px 2px;
+	padding: 16px 32px;
+	text-decoration: none;
+}
+
+input[type]{
+	border: solid black 1px;
+	font-size: 15px;
+	height: 25px;
+	width: 60%;
+}
+
+select{
+	font-size: 15px;
+	height: 25px;
+	width: 30%;
+}
+
+#cPhone, #cName, #hqCity, #hqStreet{
+	width: 55%;
+}
+
+#hqZip{
+	width: 20%;
+}
+
+#oMission{
+	padding: 0 0 100px 0;
+}
+
+#search, #donate{
+	text-indent: 30px;
+}
+
+#subButton, #resButton{
+	font-size: 20px;
+	height: 10%;
+	width: 20%;
+}
+
+#subButton:hover, #resButton:hover{
+	background-color:#ffffff;
+	color:#000000;
+}
+
+#upload{
+	border:none;
+}
+
+/* **** FORM STYLE ENDS * ****/
+/* **** HR STYLE BEGINS * ****/
+
+hr{
+	float: center;
+	width: 85%;
+}
+
+hr.finder{
+	float: center;
+	margin-left: 23%;
+	margin-top: -10%;
+	width: 70%;
+}
+
+/* **** HR STYLE ENDS * ****/
+/* **** FOOTER STYLE BEGINS * ****/
+
+footer{
+	font-size: 20px;
+	text-align: center;
+}
+
+/* **** FOOTER STYLE ENDS * ****/

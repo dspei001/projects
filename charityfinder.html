@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="clear_funds_style.css" />
+	
+<!-- GOOGLE FONT LIBRARY IMPORT HERE -->
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Dosis" rel="stylesheet">
+	
+<!-- META TAGS HERE -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Helping to provide charity fund allocation transparency.">
+	<meta name="keywords" content="Charity transparency, donation customization">
+	<meta name="author" content="Diana Palacios, Vern Bienaime, Erica Guzman, Khaii Ross, Debra-Lee Speight">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Charity Finder</title>
+
+	<style>		
+		main{
+			background-color: rgba(200,200,200,0.0);
+			margin-right: 20%;
+			text-align: right;
+		}
+		
+		input[type=text]{
+			font-size: 20px;
+			float: left;
+			height: 40px;
+			margin-left: 20%;
+			-webkit-transition: width 0.4s ease-in-out;
+			transition: width 0.4s ease-in-out;
+			width: 30%;
+		}
+
+		input[type=text]:focus{
+			width: 65%;
+		}
+		
+		input[type=image]{
+			border: none;
+			height: 45px;
+			width: 45px;
+			float: left;
+			margin-left: 20%;
+			margin-right: -17%;
+			margin-top: -0.2%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="banner">
+		<br>
+		<h1>Clear Funds <!--<img class="check" src="assets/check3.png" alt="Check box with check mark">--></h1>
+		<h3>Donation Transparency & Charity Checklist</h3>
+		<br>
+	</div>
+
+	<br>
+	<nav>
+		<ul>
+			<li><a href="index.html">Welcome  </a></li>
+			<li><a href="charityfinder.html">  Charity Finder  </a></li>
+			<li><a href="report.html">  Report Charity Fraud  </a></li>
+			<li><a href="join.html">  Join Clear Funds </a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<h2 class="list">Charity Finder</h2>
+
+		<form name="appform" action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="post">
+			<input type="image" src="assets/search.png" border="0" alt="Submit" class="submit" onclick="runRequest"/>
+			<input type="text" name="Charity Finder" id="search" />
+		</form>
+		<br>
+		<br>
+		<br>
+		<p class="center">
+			Browse our database of financially transparent non-profit organizations,
+			<br>or search by category below to get started.
+		</p>
+
+		<h3 class="finder"> Animals </h3>
+		<br><br>
+		<img class="icons" src="assets/animals.png" alt="Animals logo">
+		<br><a class="list" href="">Bransby Horses</a>
+		<br><a class="list" href="">British Deer Society</a>
+		<br><a class="list" href="">Hauser Bears</a>
+		<br><a class="list" href="">Rainforest Concern</a>
+		<br><a class="list" href="">Woodside Animal Welfare Trust</a>
+		<hr class="finder">
+		<h3 class="finder"> Children/Youth </h3>
+		<br><br>
+		<img class="icons" src="assets/children.png" alt="Children logo">
+		<br><a class="list" href="">Action for Children</a>
+		<br><a class="list" href="">Daisy's Dream</a>
+		<br><a class="list" href="">Hope Family Homes</a>
+		<br><a class="list" href="">The Lullaby Trust</a>
+		<br><a class="list" href="">Save the Children</a>
+		<hr class="finder">
+		<h3 class="finder"> Community </h3>
+		<br><br>
+		<img class="icons" src="assets/community.png" alt="Community logo">
+		<br><a class="list" href="">Carita's Care</a>
+		<br><a class="list" href="goodwill.html">Goodwill</a>
+		<br><a class="list" href="">Haig Housing</a>
+		<br><a class="list" href="">The Salvation Army</a>
+		<hr class="finder">
+		<h3 class="finder"> Disabled </h3>
+		<br><br>
+		<img class="icons" src="assets/disabled.png" alt="Disabled logo">
+		<br><a class="list" href="">Limbless Association</a>
+		<br><a class="list" href="">The Fire Fighters Charity</a>
+		<br><a class="list" href="">The Outsider's Trust</a>
+		<br><a class="list" href="">SEQUAL Trust</a>
+		<br><a class="list" href="">Vision Homes Association</a>
+		<hr class="finder">
+		<h3 class="finder"> Education </h3>
+		<br><br>
+		<img class="icons" src="assets/education.png" alt="Education logo">
+		<br><a class="list" href="">Audio Visual Ministries</a>
+		<br><a class="list" href="">Polonsky Foundation</a>
+		<br><a class="list" href="">SEMTA</a>
+		<br><a class="list" href="">Street League</a>
+		<br><a class="list" href="">United Learning</a>
+		<hr class="finder">
+		<h3 class="finder"> Environment </h3>
+		<br><br>
+		<img class="icons" src="assets/environment.png" alt="Environment logo">
+		<br><a class="list" href="">Action For Sustainable Living</a>
+		<br><a class="list" href="">Holiday With a Heart Foundation</a>
+		<br><a class="list" href="">Future Trees Trust</a>
+		<br><a class="list" href="">Rainforest Concern</a>
+		<hr class="finder">
+		<h3 class="finder"> Family </h3>
+		<br><br>
+		<img class="icons" src="assets/families.png" alt="Family logo">
+		<br><a class="list" href="">Downs Heart Group</a>
+		<br><a class="list" href="">Families First</a>
+		<br><a class="list" href="">Marie Curie</a>
+		<br><a class="list" href="">River House Trust</a>
+		<br><a class="list" href="">Stick 'n' Step</a>
+		<hr class="finder">
+		<h3 class="finder"> Health </h3>
+		<br><br>
+		<img class="icons" src="assets/health.png" alt="Health logo">
+		<br><a class="list" href="">Lymphoma Association</a>
+		<br><a class="list" href="">Liver4life</a>
+		<br><a class="list" href="">Ovarian Cancer Action</a>
+		<br><a class="list" href="">Prostate Cancer Research</a>
+		<br><a class="list" href="">World Cancer Research</a>
+		<hr class="finder">
+		<h3 class="finder"> Mental Health </h3>
+		<br><br>
+		<img class="icons" src="assets/mental.png" alt="m=Mental health logo">
+		<br><a class="list" href="">Haven Counselling Center</a>
+		<br><a class="list" href="">Mental Health Matters</a>
+		<br><a class="list" href="">Revolving Doors Agency</a>
+		<br><a class="list" href="">The Survivor's Trust</a>
+		<br><a class="list" href="">Veterans With Dogs</a>
+	</main>
+
+	<footer>
+			<hr />
+			<br/>&copy;Clear Funds 2017
+			<br><br>
+	</footer>
+</body>
+</html>	
+	
