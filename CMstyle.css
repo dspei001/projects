@@ -1,0 +1,232 @@
+/******* STRUCTURAL STYLING BEGINS *******/
+body{
+	background-color:#000000;
+	background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+	background-size:cover;
+	color:#ffffff;
+	font-family:'Pavanam', sans-serif;
+	font-size:20px;
+	text-align:center;
+}
+
+main{
+	padding-left:10%;
+	padding-top:5%;
+	padding-right:10%;
+}
+
+footer{
+	background-color:rgba(0,0,0,0.5);
+	padding:1%;
+}
+/******* STRUCTURAL STYLING ENDS *******/
+
+/******* NAVIGATION STYLING BEGINS *******/
+nav ul li{
+	float:left;
+}
+
+nav ul{
+	background-color:rgba(0,0,0,0.4);
+	border:solid #3c4059 1px;
+	list-style-type:none;
+	overflow:hidden;
+}
+
+li a{
+	display:block;
+	color:#ffffff;
+	font-family:'Trochut', cursive;
+	font-size:20px;
+	font-weight:bold;
+	letter-spacing:3px;
+	text-align:center;
+	text-decoration:none;
+	padding:10px 25px;
+}
+
+nav ul li a:hover, fieldset.contact{
+	color:#ffffff;
+}
+/******* NAVIGATION STYLING ENDS *******/
+
+/******* SECTIONAL STYLING BEGINS *******/
+section{
+	background-color:rgba(0,0,0,0.55);
+	background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+	background-size:cover;
+	border:solid 1px;
+	border-color:rgba(170, 153, 102, 0.3);
+	border-radius:20px;
+	margin:auto;
+	margin-bottom:10%;
+	padding:4%;
+}
+
+div.date{
+	color:#ffffff;
+	text-align:right;
+	margin-top:-7%;
+}
+
+div.narrow img{
+	margin-top:-3%;
+}
+
+img.banner{
+	margin:auto;
+	margin-top:-5%;
+}
+
+img.left{
+	float:left;
+	padding:2%;
+}
+
+img.right{
+	float:right;
+	padding:2%;
+}
+
+hr{
+	margin-top:-10%;
+	width:10%;
+}
+/******* SECTIONAL STYLING BEGINS *******/
+
+/******* FIELDSET STYLING BEGINS *******/
+fieldset{
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+	padding:3%;
+}
+
+fieldset ul{
+	list-style-image:url('assets/bullet.png');
+}
+
+fieldset ul li{
+	text-align:justify;
+}
+
+fieldset.left{
+	background-color:rgba(80,80,80,0.2);
+	border-color:#eab200;
+	border-radius:20px;
+	float:left;
+	margin-left:9.5%;
+	margin-right:60%;
+	margin-top:2%;
+	padding:2%;
+}
+
+fieldset.right{
+	background-color:rgba(80,80,80,0.2);
+	border-color:#924800;
+	border-radius:20px;
+	float:right;
+	margin-left:42%;
+	margin-right:10%;
+	margin-top:-23%;
+	margin-bottom:10%;
+	padding:2%;
+}
+
+fieldset.exp{
+	background-color:rgba(0,0,0,0.3);
+	border-radius:20px;
+	margin-left:35%;
+}
+
+fieldset.contact{
+	border-radius:20px;
+	font-size:16px;
+	text-align:left;
+	margin-left:1%;
+	margin-right:70%;
+	margin-top:-86%;
+	margin-bottom:30%;
+}
+
+fieldset.contact p{
+	color:#5e627b;
+	text-align:justify;
+}
+
+fieldset.contact a:link{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+legend{
+	overflow:auto;
+	background-color:rgba(0,0,0,0.3);
+	color:#ffffff;
+	font-family:'Trochut', cursive;
+	font-size:30px;
+	letter-spacing:3px;
+	font-weight:bold;
+	text-align:center;
+}
+/******* FIELDSET STYLING ENDS *******/
+
+/******* TEXT-LEVEL STYLING BEGINS *******/
+header h1{
+	font-family:'Parisenne', cursive;
+	font-size:90px;
+}
+
+h2{
+	font-family:'Allura', cursive;
+	font-size:40px;
+	margin-top:-3%;
+}
+
+h2.name{
+	color:#ffffff;
+	font-family:'Clicker Script', cursive;
+	font-size:50px;
+	text-align:left;
+	margin-bottom:-5%;
+}
+
+h4{
+	color:#ffffff;
+	font-size:23px;
+	text-align:left;
+}
+
+h5{
+	color:#8f95ae;
+	font-size:15px;
+	font-style:italic;
+	font-weight:normal;
+	margin-top:-8%;
+	margin-bottom:10%;
+}
+
+h6{
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+
+p.left{
+	text-align:left;
+	text-indent:25px;
+}
+
+p.justify{
+	text-align:justify;
+}
+
+blockquote{
+	font-style:italic;
+}
+/******* TEXT-LEVEL STYLING ENDS *******/
