@@ -1,4 +1,4 @@
-/* **** BODY STYLE BEGINS * ****/
+/***** BODY *****/
 
 body{
 	background-image: url("assets/bg.jpg");
@@ -10,8 +10,7 @@ body{
 	margin: auto
 }
 
-/* **** BODY STYLE ENDS **** */
-/* **** MAIN STYLE BEGINS * ****/
+/***** MAIN *****/
 
 main{
 	margin-top: 2%;
@@ -19,8 +18,7 @@ main{
 	margin-right: 5%;
 }
 
-/* **** MAIN STYLE ENDS * ****/
-/* **** NAV STYLE BEGINS **** */
+/***** NAV *****/
 
 nav ul{
 	background-color: rgba(0,0,0,0.9);
@@ -51,8 +49,7 @@ li a:hover{
 	color: #000000;
 	}
 	
-/* **** NAV STYLE ENDS * ****/
-/* **** DIV STYLE BEGINS * ****/
+/***** DIV *****/
 
 div.banner{
 	background-image: url("assets/banner.jpg");
@@ -81,8 +78,7 @@ div.index{
 	width: 86%;
 }
 
-/* **** DIV STYLE ENDS * ****/
-/* **** IMAGE STYLE BEGINS * ****/
+/***** IMAGES *****/
 
 img.logo{
 	float: left;
@@ -120,16 +116,13 @@ img.reportRight{
 	margin-right: 15%;
 }
 
-/* **** IMAGE STYLE ENDS * ****/
-
-/* **** FIGURE STYLE BEGINS * ****/
+/***** FIGURES *****/
 
 figure{
 	opacity: 0.8;
 }
 
-/* **** FIGURE STYLE ENDS * ****/
-/* **** HEADING STYLE BEGINS * ****/
+/***** HEADINGS *****/
 
 h1{
 	color: #ffffff;
@@ -185,8 +178,7 @@ h3.report{
 	text-align: center;
 }
 
-/* **** HEADING STYLE ENDS * ****/
-/* **** PARAGRAPH STYLE BEGINS * ****/
+/***** PARAGRAPHS *****/
 
 p{
 	font-size: 23px;
@@ -220,8 +212,7 @@ p.reportRight{
 	margin-right: 40%;
 }
 
-/* **** PARAGRAPH STYLE ENDS * ****/
-/* ***** ANCHOR STYLE BEGINS * ****/
+/****** ANCHORS *****/
 
 a.list{
 	display: block;
@@ -232,8 +223,7 @@ a.list{
 	margin-bottom: 14%;
 }
 
-/* **** ANCHOR STYLE ENDS * ****/
-/* **** FORM STYLE BEGINS * ****/
+/***** FORMS *****/
 
 form{
 	padding: 1%;
@@ -304,8 +294,7 @@ select{
 	border:none;
 }
 
-/* **** FORM STYLE ENDS * ****/
-/* **** HR STYLE BEGINS * ****/
+/***** HORIZONTAL RULES *****/
 
 hr{
 	float: center;
@@ -319,12 +308,9 @@ hr.finder{
 	width: 70%;
 }
 
-/* **** HR STYLE ENDS * ****/
-/* **** FOOTER STYLE BEGINS * ****/
+/***** FOOTER *****/
 
 footer{
 	font-size: 20px;
 	text-align: center;
 }
-
-/* **** FOOTER STYLE ENDS * ****/
