@@ -1,0 +1,29 @@
+
+README : Histogram
+
+--------------
+INCLUDED FILES
+--------------
+
++ Histogram
+	- createHistogram.c
+	- generateSamples.c
+	- Header.h
+	- main.c
+	- Makefile (with 'make all' option)
+	- printResults.c
+	- utilities.c
+	- writeSamples.c
+
+-----------
+DESCRIPTION
+-----------
+
+This program generates a vertical histogram based on sample values generated using the 
+method of sample distribution selected by the user. User is then prompted for the 
+appropriate values for mean, standard deviation, and number of bins. The result is the 
+histogram, population mean, population standard deviation, values entered by the user, 
+most-used bins, ranges for each bin, and number of values that fell into each bin.
+
+NOTE: All sample values are written to a text file for reference. See writeSamples().
+NOTE: The Make option, 'make clean', will delete object files AND the sample text file(s).

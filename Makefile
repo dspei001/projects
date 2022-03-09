@@ -1,6 +1,6 @@
 C = gcc
 OPTIONSO = -lm -Wall -std=c99 -o
-FUNCTIONSO = generateSamples.o writeSamples.o createHistogram.o meanAndStdDev.o  
+FUNCTIONSO = generateSamples.o writeSamples.o createHistogram.o printResults.o utilities.o
 
 all: main
 
