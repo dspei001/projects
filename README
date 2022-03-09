@@ -1,0 +1,117 @@
+
+README : C Chat
+
+--------------
+INCLUDED FILES
+--------------
+
++ C Chat:
+	- client.c
+	- connect.c
+	- Header.h
+	- Makefile (with 'make all' option)
+	- sendReceive.c
+	- server.c
+	- utilities.c
+
+---------------------
+DESCRIPTION: client.c
+---------------------
+
+To begin, this program gathers and checks arguments used at the command line.
+	OPTIONAL int parameter used for port number.
+	NOTE: If port number is not specified, the default port number is 7000.
+
+Next, the program becomes a server that makes a connection with a client by performing
+the following operations:
+	1) Creates a socket
+	2) Initializes the socket address structure
+	3) Binds the socket to an address
+	4) Listens for connections
+	5) Accepts a connection from the client
+	6) Receives and prints messages from the client
+	8) Sends messages to the client
+	9) Closes the connection when either client or server sends 'Exit'
+
+Error-checks include:
+	FOR FLAGS:
+		Invalid flags
+
+	FOR PARAMETERS:
+		Too many parameters
+		Invalid range for port number
+
+
+Output Sample:
+--------------
+
+	    .::. Connected with client! .::.
+
+	        To end chat, type "Exit"
+
+
+	Client message here
+
+	# [Server]: Server message here
+
+	# [Server]: Server message here
+	Client message here
+
+	# [Server]: Server message here
+	Client message here
+	Client message here
+
+
+	.::. Now ending connection with server .::.
+					- OR -
+	.::. Server now ending connection .::.
+
+---------------------
+DESCRIPTION: server.c
+---------------------
+
+To begin, this program gathers and checks flags used at the command line.
+	OPTIONAL int parameter used for port number.
+	NOTE: If port number is not specified, the default port number is 7000.
+
+Next, the program becomes a client that makes a connection with a server by performing
+the following operations:
+	1) Creates a socket
+	2) Initializes the socket address structure relative to the server
+	3) Connects the socket to the server address
+	4) Sends the messages to the server
+	5) Receives and prints messages from the server
+	6) Closes the connection when server or client sends 'Exit'
+
+Error-checks include:
+	FOR FLAGS:
+		Invalid flags
+
+	FOR FLAG ARGUMENTS AND PARAMETERS:
+		Too many parameters
+		Invalid range for port number
+
+
+Output Sample:
+--------------
+
+	    .::. Connected with server! .::.
+
+	        To end chat, type "Exit"
+
+
+	Server message here
+
+	# [Client]: Client message here
+
+	# [Client]: Client message here
+	Server message here
+
+	# [Client]: Client message here
+	Server message here
+	Server message here
+
+
+	.::. Now ending connection with client .::.
+					- OR -
+	.::. Client now ending connection .::.
