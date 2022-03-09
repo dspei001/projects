@@ -1,0 +1,39 @@
+
+README : Memory Allocation Simulator
+
+--------------
+INCLUDED FILES
+--------------
+
++ Memory Allocation Simulator
+	- Algorithms.c
+	- Header.h
+	- main.c
+	- Makefile (with 'make all' option as well as tests and scenarios)
+	- MemoryProcessing.c
+	- PrintUtilities.c
+	- README
+
+-----------
+DESCRIPTION
+-----------
+
+This program demonstrates memory allocation under the First Fit, Best Fit, and Worst Fit 
+algorithms. Displayed on the console is a lot of colored text to demonstrate each step of
+process. If the size of memory is <= 1000, then the contents of memory are also printed at 
+each step. At the very end of the simulation, the final average memory utilization (AMU), 
+average number of holes examined by the chosen algorithm, total execution time in seconds, 
+and a line that displays the variables that were used for the simulation are all displayed.
+
+NOTE ON MAKEFILE: The included Makefile has several options for choosing the simulation
+variables, as well as 3 tests. Each 'test' or 'scene' operation also performs 'make clean' 
+and 'make all' just before running the program. The variables per Make operation are listed
+as follows where the numbers represent (number of iterations, memory size, mean, std dev):
+
+test1: 10 100 25 7
+test2: 100 200 104857 26214.0
+test3: 10000 5000 419430 136314.8
+
+scene1: 1000 16777216 1048576 262144.0
+scene2: 1000 16777216 4194304 1363148.8
+scene3: 500 1073741824 268435456 67108864.0
