@@ -1,0 +1,23 @@
+
+README : Password Protected Java Journal
+
+--------------
+INCLUDED FILES
+--------------
+
++ Histogram
+	- Entry.java
+	- Errors.java
+	- Journal.java (main())
+	- Makefile (with 'make run' option)
+	- Menus.java
+	- Password.java
+	- README
+
+-----------
+DESCRIPTION
+-----------
+
+This program provides a password protected journal interface that also encrypts entries
+for added security. The password is also stored on a file that is encrypted; access to
+the password file is prohibited.
