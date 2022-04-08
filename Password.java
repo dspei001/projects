@@ -1,167 +1,145 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
-public class Password {
-	
-	public int password(){
-		
-		// Inform user of three attempts to enter correct password.
-		System.out.println("\n\t.:: FOR SECURITY REASONS, ONLY 3 ATTEMPTS ARE ALLOWED ::.");
-		
-		// Strings to hold user-entered password and decrypted saved password.
-		String passwordEntered = "", decryptedPassword = "";
-		
-		// Local object declarations for class function use.
-		Errors errors = new Errors();
-		Entry entry = new Entry();
-		
-		// Scanner object for user input.
-		Scanner in = new Scanner(System.in);
+/**
+ * Password class contains password-related operations such as encrypting,
+ * decrypting, validating, and resetting the password file.
+ * @author Debra-Lee Speight
+ */
+public class Password{
+	private final Errors errors;
+	private final Scanner in;
+	private Scanner fileScan;
+	private File file;
 
-		// File object for password file.
-		File file = new File("PW");
-			 
-		// File Scanner object for password file. 
-		Scanner fileScan = null;
-			
-		// If file does not exist... 
-		if(!file.exists()){
-
-			// ...display default password to user
-			errors.errorMessage("pwu", "");
-
-			// ...create new password file
-			try{
-				file.createNewFile();
-			}
-			catch(IOException e){
-				errors.errorMessage("write", "");
-				//e.printStackTrace();
-			}
-
-			// ...and write the default password to password file after encrypting.
-			try{
-				FileWriter fileWriter = new FileWriter(file);
-				String defaultPW = entry.encryptDecrypt(" ", true, false);
-				fileWriter.write(defaultPW);
-				fileWriter.close();
-			}
-			catch(IOException e){
-				errors.errorMessage("write", "");
-				//e.printStackTrace();
-			}
-		}
-		
-		// Set file Scanner object.
-		try{
-			fileScan = new Scanner(file);
-		}
-		catch(IOException e){
-			errors.errorMessage("write", "");
-			//e.printStackTrace();
-		}
-
-		// Get the password from the password file and decrypt.
-		decryptedPassword = fileScan.nextLine();
-		decryptedPassword = entry.encryptDecrypt(decryptedPassword, false, true);
-
-		// Close file scanner object.
-		fileScan.close();
-			
-		// For-loop for the three attempts.
-		for(int i = 0; i < 3; i++){
-
-			// Prompt user to enter password.
-			System.out.print("\n\tENTER CURRENT PASSWORD:  ");
-			passwordEntered = in.nextLine();
-
-			// If user-entered password matches decrypted password, access granted; return.
-			if(passwordEntered.equals(decryptedPassword)){
-				System.out.println("\n\tACCESS GRANTED...");
-				return 0;
-			}
-
-			// Else, display message for invalid password.
-			else System.out.println("\n\tINVALID PASSWORD...");
-		}
-
-		// If three failed attempts have been made, display message and return 1.
-		System.out.println("\n\t.:: YOU HAVE REACHED THE MAXIMUM ATTEMPTS ALLOWED. ACCESS DENIED ::.");
-		return 1;
+	/**
+	 * Constructor instantiates class members.
+	 */
+	Password(){
+		errors = new Errors();
+		in = new Scanner(System.in);
+		fileScan = null;
+		file = null;
 	}
-	
-	public void editPassword(){
-		
-		// Boolean to determine whether password is confirmed.
-		boolean passwordConfirmed = false;
-		
-		// Int variable, checkPassword, holds return value of password().
-		int checkPassword = 0;
-		
-		// Strings to hold new password and decrypted saved password.
-		String newPassword = "", confirmNewPassword = "";
-		
-		// Local object declarations for class function use.
-		Errors errors = new Errors();
-		Entry entry = new Entry();
-		
-		// Scanner object for user input.
-		Scanner in = new Scanner(System.in);
 
-		// Introduce 'edit password' section.
-		System.out.println("\n\n\t*****************");
-		System.out.println("\t* EDIT PASSWORD *");
-		System.out.print("\t*****************\n");
+	/**
+	 * Allows user to reset password upon validation of current password.
+	 */
+	void resetPW(){
+		String newPW = "newPW", confirmNewPW = "confirmPW";
+		boolean oldPWvalidated = validatePW();
+		while(oldPWvalidated && !newPW.equals(confirmNewPW)){
+			System.out.print("\n\tEnter new password:  ");
+			newPW = in.nextLine();
 
-		// Check user password. password() returns 0 if correct password and returns 1 if incorrect password.
-		checkPassword = password();
+			System.out.print("\tConfirm new password:  ");
+			confirmNewPW = in.nextLine();
 
-		// If password is incorrect, return to main menu.
-		if(checkPassword == 1) return;
-			
-		// Do-while loop until new password confirmation is successful.
-		do{
-
-			// Prompt user to enter new password.
-			System.out.print("\n\tENTER NEW PASSWORD:  ");
-			newPassword = in.nextLine();
-
-			// Prompt user to confirm new password.
-			System.out.print("\tCONFIRM NEW PASSWORD:  ");
-			confirmNewPassword = in.nextLine();
-
-			// If the two passwords match...
-			if(newPassword.equals(confirmNewPassword)){
-
-				// ...open password file for writing using PrintWriter object
-				PrintWriter printWriter = null;
+			if(newPW.equals(confirmNewPW)){
+				try{file.createNewFile();}
+				catch(IOException e){errors.errorMessage("create", "", "");}
 
 				try{
-					printWriter = new PrintWriter("PW");
+					FileWriter fileWriter = new FileWriter(file);
+					fileWriter.write(encryptPW(newPW));
+					fileWriter.close();
 				}
-				catch(FileNotFoundException e){
-					errors.errorMessage("write", "");
-					//e.printStackTrace();
-				}
-
-				// ...write new encryoted password to password file
-				printWriter.print("");
-				newPassword = entry.encryptDecrypt(newPassword, true, false);
-				printWriter.print(newPassword);
-				
-				// ...and close PrintWriter object.
-				printWriter.close();
-
-				// Passwords match, so password is confirmed; exits do-while loop.
-				passwordConfirmed = true;
+				catch(IOException e){errors.errorMessage("filewriter", "", "");}
 			}
+			else System.out.println("\n\t(!) ERROR: The passwords do not match.");
+		}
+		System.out.println("\n\tPassword changed successfully.");
+	}
 
-			// Else, if password editing is unsuccessful, display message.
-			else System.out.print("\n\tTHE PASSWORDS DO NOT MATCH. TRY AGAIN...");
+	/**
+	 * Validates the password by comparing the decrypted password to the user's
+	 * password input; user gets 3 attempts to enter the correct password.
+	 * @return true if password entered is correct; false otherwise
+	 */
+	boolean validatePW(){
+		String currentPW = getCurrentPW();
+		for(int i = 0; i < 3; i++){
+			System.out.print("\n\tENTER CURRENT PASSWORD:  ");
+			String pwEntered = in.nextLine();
 
-		}while(!passwordConfirmed);
+			if(pwEntered.equals(currentPW)){
+				System.out.println("\n\tACCESS GRANTED!");
+				return true;
+			}
+			else System.out.println("\n\tINVALID PASSWORD");
+		}
+		System.out.println("\n\tACCESS DENIED!");
+		return false;
+	}
 
-		// If password edit is successful, display message and return to main menu.
-		System.out.println("\n\tPASSWORD SUCCESSFULLY CHANGED...");
+	/**
+	 * Creates the password file, encrypts and writes the default password
+	 * to the password file, and displays the default password to the user.
+	 */
+	private void setDefaultPW(){
+		try{
+			FileWriter fileWriter = new FileWriter(file);
+			fileWriter.write(encryptPW(" "));
+			fileWriter.close();
+		}
+		catch(IOException e){errors.errorMessage("filewriter", "", "");}
+		errors.errorMessage("defaultPW", "", "");
+	}
+
+	/**
+	 * Opens the password file, then decrypts and returns the password.
+	 * @return currentPW decrypted
+	 */
+	private String getCurrentPW(){
+		file = new File("PW");
+		if(!file.exists()){
+			try{file.createNewFile();}
+			catch(IOException e){errors.errorMessage("create", "", "");}
+			setDefaultPW();
+		}
+		try{fileScan = new Scanner(file);}
+		catch(IOException e){errors.errorMessage("scanner", "", "");}
+
+		String currentPW = fileScan.nextLine();
+		fileScan.close();
+		return decryptPW(currentPW);
+	}
+
+	/**
+	 * Encrypts the password in the password text file for security.
+	 * @param pw
+	 * @return encryptedPW
+	 */
+	private String encryptPW(String pw){
+		int length = pw.length();
+    	String encryptedPW = "";
+		int i = 0;
+		while(i != length){
+			Character character = pw.charAt(i);
+			int ascii = character + 12;
+			encryptedPW += (char)ascii;
+			i++;
+		}
+		return encryptedPW;
+	}
+
+	/**
+	 * Decrypts the password in the password text file for validation.
+	 * @param encryptedPW
+	 * @return decryptedPW
+	 */
+	private String decryptPW(String encryptedPW){
+		int length = encryptedPW.length();
+    	String decryptedPW = "";
+		int i = 0;
+		while(i != length){
+			Character character = encryptedPW.charAt(i);
+			int ascii = character - 12;
+			decryptedPW += (char)ascii;
+			i++;
+		}
+		return decryptedPW;
 	}
 }
