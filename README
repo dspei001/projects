@@ -1,11 +1,11 @@
 
-README : Histogram
+README : Histogram Generator
 
 --------------
 INCLUDED FILES
 --------------
 
-+ Histogram
++ Histogram Generator
 	- createHistogram.c
 	- generateSamples.c
 	- Header.h
