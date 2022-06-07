@@ -1,11 +1,11 @@
 
-README : C Chat
+README : Client Server Chat
 
 --------------
 INCLUDED FILES
 --------------
 
-+ C Chat:
++ Client Server Chat:
 	- client.c
 	- connect.c
 	- Header.h
