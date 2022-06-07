@@ -12,6 +12,7 @@ INCLUDED FILES
 	- main.c
 	- Makefile (with 'make all' option)
 	- printResults.c
+	- README
 	- utilities.c
 	- writeSamples.c
 
