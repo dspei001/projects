@@ -10,6 +10,7 @@ INCLUDED FILES
 	- connect.c
 	- Header.h
 	- Makefile (with 'make all' option)
+	- README
 	- sendReceive.c
 	- server.c
 	- utilities.c
