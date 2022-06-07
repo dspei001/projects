@@ -1,0 +1,21 @@
+
+README : TimeElapsed
+
+--------------
+INCLUDED FILES
+--------------
+
++ TimeElapsed
+	- JFrameForm.java
+	- TimeElapsed.java
+
+-----------
+DESCRIPTION
+-----------
+
+This program takes two files as input where the first file is a list of order times and 
+the second a list of delivery times. The output is a new file containing the elapsed times. 
+Times in all files are formatted as: DD HH:mm:ss. TimeElapsed is the first project where I 
+have made use of JavaSwing components to create a minimal GUI. 
+
+NOTE: Much of this code still needs refactoring, thus it is still a work in progress.
