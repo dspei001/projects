@@ -1,0 +1,28 @@
+
+README : Clear Funds
+
+--------------
+INCLUDED FILES
+--------------
+
++ Clear Funds
+	- about.html
+	- index.html
+	- README
+	- resume.html
+	- spotlight.html
+	- style.css
+
+-----------
+DESCRIPTION
+-----------
+
+This page was a Hackathon project for Broward College in 2017. The idea was to create a 
+site for an entity, Clear Funds, that would act as a sort of donation funds transparency 
+system for participating non-profits or other charitable programs. The user is the donor 
+who would be able to search for a participating organization and be presented with a list 
+of services provided by that organization where the donor can then select and contribute to 
+specific services of his or her choosing. This was intended to provide more transparency 
+regarding the use of donation funds, discourage charity fraud, and provide a mechanism for 
+people to find and make connections with vetted, trustworthy organizations, as well as 
+report any suspected fraud.
