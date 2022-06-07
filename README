@@ -1,0 +1,22 @@
+README : "projects" repository
+
+-----------------
+INCLUDED BRANCHES
+-----------------
+
+- Clear-Funds (webpage)
+- Client-Server-Chat (C program)
+- Histogram-Generator (C program)
+- Journal-Java (Java program)
+- Memory-Allocation-Simulator (C program)
+- Time-Elapsed (Java/JavaSwing program)
+- Toy-Collector-Page (webpage)
+- Wine-&-Spirits-Portfolio (webpage)
+
+-----------
+DESCRIPTION
+-----------
+
+This repository was set up to provide all source code for my various coding projects 
+written in various languages. These projects are currently presented with screenshots 
+on my GitHub Pages portfolio page.
