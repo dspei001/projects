@@ -1,11 +1,11 @@
 
-README : Password Protected Java Journal
+README : Password Protected Journal (Java)
 
 --------------
 INCLUDED FILES
 --------------
 
-+ Histogram
++ Password Protected Journal (Java)
 	- Entry.java
 	- Errors.java
 	- Journal.java (main())
