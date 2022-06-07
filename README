@@ -1,0 +1,26 @@
+
+README : Password Protected Journal (C)
+
+--------------
+INCLUDED FILES
+--------------
+
++ Password Protected Journal (C)
+	- Entry.c
+	- Errors.c
+	- Header.h
+	- main.c
+	- Makefile
+	- Menus.c
+	- Password.c
+	- README
+
+-----------
+DESCRIPTION
+-----------
+
+This program provides a password protected journal interface that also encrypts entries
+for added security. The password is also stored on a file that is encrypted; access to
+the password file is prohibited.
+
+NOTE: This version of Java Journal (in C) is not yet complete; do not attempt to run.
